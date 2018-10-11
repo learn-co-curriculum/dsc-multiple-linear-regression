@@ -1,5 +1,5 @@
 
-# Introduction
+# Multiple Linear Regression
 
 ## Introduction
 In this lecture, you'll be introduced to the multiple linear regression model. We'll start with an introductory example using linear regression, which you've seen before, to act as a segue into multiple linear regression. We'll conclude this lecture by looking at a real data example.
