@@ -11,7 +11,7 @@ You will be able to:
 
 ## From simple to multiple linear regression
 
-You have previously learned about linear regression models. In these models, what you try to do is fit a linear relationshio between two variables. Let's refresh our memory with the example below. Here, we are trying to find a relationship between seniority and monthly income. It is definitely reasonable to assume that, on average, people with more seniority have a higher income than people who are newer to the job market and have less experience. A potential relationship could look like the plot below. The monthly income is shown in 1000 USD.
+You have previously learned about linear regression models. In these models, what you try to do is fit a linear relationship between two variables. Let's refresh our memory with the example below. Here, we are trying to find a relationship between seniority and monthly income. It is definitely reasonable to assume that, on average, people with more seniority have a higher income than people who are newer to the job market and have less experience. A potential relationship could look like the plot below. The monthly income is shown in 1000 USD.
 
 
 ```python
