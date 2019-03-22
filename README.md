@@ -34,12 +34,12 @@ plt.show();
 ```
 
 
-![png](index_files/index_5_0.png)
+![png](index_files/index_1_0.png)
 
 
 Here, seniority is the independent variable, and monthly income is the target variable.
 
-Of course, you know that seniority is not the only factor that drives income. Other factors that can play a role are, among others, number of hours worked, years of education, and city of employment. Now You could create simple linear regression models for each of these factors and monthly outcome as a target, but more interestingly, you can also create a model where all these potential predictors serve as independent variables at once. How does this work? Let's start with an example with two predictors. Let's start by refreshing the expression for our linear model. As a general expression for our linear model, we had that $\hat Y = bX + a$. Applied to this example, this would boil down to:
+Of course, you know that seniority is not the only factor that drives income. Other factors that can play a role are, among others, the number of hours worked, years of education, and the city of employment. Now, you could create simple linear regression models for each of these factors and monthly outcome as a target, but more interestingly, you can also create a model where all these potential predictors serve as independent variables at once. How does this work? Let's start with an example with two predictors. Let's start by refreshing the expression for our linear model. As a general expression for our linear model, we had that $\hat Y = bX + a$. Applied to this example, this would boil down to:
 
 $\text{estimated monthly income} = slope * seniority + intercept $
 
@@ -50,7 +50,7 @@ $\text{estimated monthly income} = slope\_s * seniority + slope\_ed * years\_of\
 
 What exactly does that look like?
 
-<img src="multiple_reg.png" alt="Drawing" style="width: 500px;"/>
+<img src="images/multiple_reg.png" width="500">
 
 As we have two predictors here, the simple line is replaced by a **plane**. Our $slope\_s$ represents the slope in the direction of the axis associated with seniority, our $slope\_ed$ represents the slope in the direction of the axis associated with years of education. 
 
@@ -65,4 +65,4 @@ where $n$ is the number of predictors, $\beta_0$ is the intercept, and $\hat y$ 
 
 ## Summary
 
-Congratulations! You have gained an initial understanding for a multinomial linear regression model. To illustrate the usage of the multiple linear regression model, we'll be using the auto-mpg dataset which contains information on the technical specifications of a variety of cars. In the labs, you'll be practicing your newly gained knowledge using the Boston Housing data again.
+Congratulations! You have gained an initial understanding of a multiple linear regression model. To illustrate the usage of the multiple linear regression model, we'll be using the auto-mpg dataset which contains information on the technical specifications of a variety of cars. In the labs, you'll be practicing your newly gained knowledge using the Boston Housing data again.
