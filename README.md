@@ -15,26 +15,26 @@ You have previously learned about linear regression models. In these models, wha
 
 
 ```python
-#import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+%matplotlib inline
 
 np.random.seed(1234)
 sen = np.random.uniform(18, 65, 100)
 income = np.random.normal((sen/10), 0.5)
-sen = sen.reshape(-1,1)
+sen = sen.reshape(-1, 1)
 
-fig = plt.figure(figsize=(7,5))
+fig = plt.figure(figsize=(7, 5))
 fig.suptitle('seniority vs. income', fontsize=16)
 plt.scatter(sen, income)
-plt.plot(sen, sen/10, c = "black")
-plt.xlabel("seniority", fontsize=14)
-plt.ylabel("monthly income", fontsize=14)
-plt.show();
+plt.plot(sen, sen/10, c='black')
+plt.xlabel('seniority', fontsize=14)
+plt.ylabel('monthly income', fontsize=14)
+plt.show()
 ```
 
 
-    <Figure size 700x500 with 1 Axes>
+![png](index_files/index_1_0.png)
 
 
 Here, seniority is the independent variable, and monthly income is the target variable.
