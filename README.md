@@ -6,8 +6,7 @@ In this lecture, you'll be introduced to the multiple linear regression model. W
 
 ## Objectives
 You will be able to:
-* Understand and explain the use cases for linear and multiple regression analyses
-* Describe multiple regression with >1 predictors
+* Interpret the parameters of a multiple regression
 
 ## From simple to multiple linear regression
 
