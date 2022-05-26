@@ -23,8 +23,8 @@ import matplotlib.pyplot as plt
 
 # generate synthetic seniority and income data
 np.random.seed(1234)
-sen = np.random.uniform(18, 65, 100)
-income = np.random.normal((sen/10), 0.5)
+sen = np.random.uniform(low=18, high=65, size=100)
+income = np.random.normal(loc=(sen/10), scale=0.5)
 sen = sen.reshape(-1, 1)
 
 # plot data and y = 0.1x regression line
@@ -44,7 +44,7 @@ ax.set_ylabel('monthly income', fontsize=14);
 
 ## "Controlling For" Other Variables with Multiple Regression
 
-If you are able to set up an ***experiment*** with randomized a control group and intervention group, that is the "gold standard" method for statistical controls. If you see a spurious result from that kind of analysis, it is most likely due to back luck rather than anything wrong with your setup. An experiment doesn't necessarily explain the underlying _mechanism_ for why a given independent variable impacts a given dependent variable, but you can be more confident that the causal relationship exists.
+If you are able to set up an ***experiment*** with a randomized control group and intervention group, that is the "gold standard" method for statistical controls. If you see a spurious result from that kind of analysis, it is most likely due to bad luck rather than anything wrong with your setup. An experiment doesn't necessarily explain the underlying _mechanism_ for why a given independent variable impacts a given dependent variable, but you can be more confident that the causal relationship exists.
 
 However if you are analyzing a "naturally-occurring" dataset of non-experimental ***observations***, more sophisticated domain knowledge and models are needed to help you interpret the data. You have a much higher risk of [spurious correlations](https://hbr.org/2015/06/beware-spurious-correlations) -- seemingly causal relationships between variables that are not legitimately related:
 
@@ -80,11 +80,11 @@ Let's return to our monthly income example.
 
 Our original model was essentially:
 
-$$\text{estimated monthly income} = slope * seniority + intercept $$
+$$\text{estimated monthly income} = \mathrm{slope} * \mathrm{seniority} + \mathrm{intercept} $$
 
 Then if we added in years of education as a predictor, it would look something like this:
 
-$$\text{estimated monthly income} = slope_{seniority} * seniority + slope_{education} * years\_of\_education  + intercept $$
+$$\text{estimated monthly income} = \mathrm{slope}_\mathrm{seniority} * \mathrm{seniority} + \mathrm{slope}_\mathrm{education} * \mathrm{years\_of\_education}  + \mathrm{intercept} $$
 
 Instead of having one slope and one intercept, we now have two slopes and an intercept. But where do those slope values come from?
 
@@ -92,7 +92,7 @@ Essentially, each variable you add is adding a ***dimension*** to the matrix of 
 
 <img src="images/multiple_reg.png" width="500">
 
-$slope_{seniority}$ represents the slope in the direction of the axis associated with seniority, and $slope_{education}$ represents the slope in the direction of the axis associated with years of education.
+$\mathrm{slope}_\mathrm{seniority}$ represents the slope in the direction of the axis associated with seniority, and $\mathrm{slope}_\mathrm{education}$ represents the slope in the direction of the axis associated with years of education.
 
 To write this with more standard variable names, we have:
 
@@ -109,7 +109,7 @@ $$ \hat{y} = \hat{\beta_0} + \hat{\beta_1} x_1 + \hat{\beta_2} x_2 $$
 
 &#42;_As more variables are added, the intercept can get increasingly nonsensical/hard to interpret._
 
-Note that we would **not** expect $\hat{\beta_1}$ to be exactly the same as $slope$ in our original equation. This is because some of the variance in monthly income is now being explained by education. While you can still use the "script" of
+Note that we would **not** expect $\hat{\beta_1}$ to be exactly the same as $\mathrm{slope}$ in our original equation. This is because some of the variance in monthly income is now being explained by education. While you can still use the "script" of
 
 > an increase of 1 in `independent variable` is associated with a change of `slope` in `dependent variable`,
 
@@ -117,7 +117,7 @@ you may want to add the phrase "all else being equal", or "controlling for educa
 
 ## Beyond Two Independent Variables
 
-Multiple linear regression models are not restricted to two independent variables. You can theoretically add an indefinite number of variables.
+Multiple linear regression models are not restricted to two independent variables. You can theoretically add an indefinite number of variables. Once we move beyond two predictors, multiple linear regression generates a best-fit _hyperplane_.
 
 When thinking of lines and slopes statistically, slope parameters associated with a particular predictor $x_i$ are often denoted by $\beta_i$. Extending this example mathematically, you would write a multiple linear regression model as follows:
 
