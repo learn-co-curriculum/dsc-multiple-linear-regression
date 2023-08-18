@@ -90,7 +90,7 @@ Instead of having one slope and one intercept, we now have two slopes and an int
 
 Essentially, each variable you add is adding a ***dimension*** to the matrix of X values. So instead of finding the best-fit for a ***line*** like in simple linear regression, now we're finding the best-fit for a ***plane***:
 
-<img src="images/multiple_reg.png" width="500">
+<img src="https://curriculum-content.s3.amazonaws.com/data-science/images/multiple_reg.png" width="500">
 
 $\mathrm{slope}_\mathrm{seniority}$ represents the slope in the direction of the axis associated with seniority, and $\mathrm{slope}_\mathrm{education}$ represents the slope in the direction of the axis associated with years of education.
 
