@@ -84,7 +84,9 @@ $$\text{estimated monthly income} = \mathrm{slope} * \mathrm{seniority} + \mathr
 
 Then if we added in years of education as a predictor, it would look something like this:
 
-$$\text{estimated monthly income} = \mathrm{slope}_\mathrm{seniority} * \mathrm{seniority} + \mathrm{slope}_\mathrm{education} * \mathrm{years\_of\_education}  + \mathrm{intercept} $$
+```math
+\text{estimated monthly income} = \mathrm{slope}_\mathrm{seniority} * \mathrm{seniority} + \mathrm{slope}_\mathrm{education} * \mathrm{years\_of\_education}  + \mathrm{intercept} 
+```
 
 Instead of having one slope and one intercept, we now have two slopes and an intercept. But where do those slope values come from?
 
